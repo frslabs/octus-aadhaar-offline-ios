@@ -34,7 +34,7 @@ Depending on the license - offline or online - you have opted for, the ping func
 
 ## iOS SDK Requirements
 
-- iOS 10.0+
+- iOS 11.0+
 - Xcode 11.2
 
 
