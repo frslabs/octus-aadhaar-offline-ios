@@ -97,10 +97,9 @@ class ViewController: UIViewController,AadhaarResultDelegate{
     func didFailedAadhaarResult(_ error: String) {
         let errorCode = error
     }
+    
+    
     2. Invoke Aadhaar offline SDK
-
-```swift
-    // ...
     
    override func viewDidAppear(_ animated: Bool) {
    Aadhaar.performSegueToFrameworkVC(caller: self, licenceKey: "LICENCE_KEY_OCTUS_AADHAR_OFFLINE_SDK", baseUrl: "OCTUS_AADHAR_OFFLINE_API_BASE_URL", keyId:          "OCTUS_AADHAR_OFFLINE_KEY_ID", keysecret: "OCTUS_AADHAR_OFFLINE_KEY_SEC")
@@ -108,7 +107,6 @@ class ViewController: UIViewController,AadhaarResultDelegate{
     }
     
     // ...    
-```
 ```
 
 ## Octus Error Codes
