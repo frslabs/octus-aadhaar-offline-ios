@@ -106,8 +106,7 @@ class ViewController: UIViewController,AadhaarResultDelegate{
     Aadhaar.aadhaarDelegate = self
     
     }
-    
-    // ...    
+   
 ```
 
 ## Octus Error Codes
