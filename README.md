@@ -47,7 +47,7 @@ You can use [CocoaPods](http://cocoapods.org/) to install `aadhaarOffline` by ad
 platform :ios, '13.0'
 source 'https://gitlab.com/frslabs-public/ios/aadhaaroffline.git'
 use_frameworks!
-pod 'aadhaarOffline'
+pod 'aadhaarOffline,'1.0.0''
 pod 'Zip'
 ```
 
@@ -61,7 +61,9 @@ import aadhaarOffline
 
 ## Usage example
 
-####  File SDK 
+### Swift
+
+1. Initialize the input parameters and import delegate AadhaarResultDelegate
 
 ```swift
 import UIKit
@@ -95,18 +97,19 @@ class ViewController: UIViewController,AadhaarResultDelegate{
     func didFailedAadhaarResult(_ error: String) {
         let errorCode = error
     }
-```
-####  In-App SDK 
+    2. Invoke Aadhaar offline SDK
 
 ```swift
- import UIKit
- import aadhaarOffline
- 
-  Aadhaar.performSegueToFrameworkVC(caller: self, licenceKey: "LICENCE_KEY_OCTUS_AADHAR_OFFLINE_SDK", baseUrl: "OCTUS_AADHAR_OFFLINE_API_BASE_URL", keyId: "OCTUS_AADHAR_OFFLINE_KEY_ID", keysecret: "OCTUS_AADHAR_OFFLINE_KEY_SEC")
+    // ...
+    
+   override func viewDidAppear(_ animated: Bool) {
+   Aadhaar.performSegueToFrameworkVC(caller: self, licenceKey: "LICENCE_KEY_OCTUS_AADHAR_OFFLINE_SDK", baseUrl: "OCTUS_AADHAR_OFFLINE_API_BASE_URL", keyId:          "OCTUS_AADHAR_OFFLINE_KEY_ID", keysecret: "OCTUS_AADHAR_OFFLINE_KEY_SEC")
   Aadhaar.aadhaarDelegate = self
-
-``` 
-
+    }
+    
+    // ...    
+```
+```
 
 ## Octus Error Codes
 
