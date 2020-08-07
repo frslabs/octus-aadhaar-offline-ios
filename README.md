@@ -136,7 +136,7 @@ Error codes and their meaning are tabulated below
 - OCTUS_AADHAR_OFFLINE_KEY_SEC -  Accept aadhaar KEY SECRET as a String
 
 
-#### In-App SDK configuration. 
+#### SDK configuration. 
 
 This part of the integration allows you to integrate the drop-in screens for the in-app experience whereby the Aadhaar holder will enter the Aadhaar Number or VID, Captcha, OTP and four digit share code all within your App without redirecting to the UIDAI website. The Aadhaar Offline file once downloaded will be parsed in-memory and displayed in the App (data shared with the App as JSON data). The experience is seamless with the in-app option. However, one of the caveats to this configuration is that any change to the UIDIA website will need to be updated and is a reactive release and there is a risk of your App not working until the changes reflect in the SDK.
 
