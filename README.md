@@ -67,18 +67,34 @@ import aadhaarOffline
 import UIKit
 import aadhaarOffline
 
-let aadhaarXMLFileParser = OctusAadhaarOffline(licenceKey: LICENCE_KEY_OCTUS_AADHAR_OFFLINE_SDK, filePath: SELECTED_FILE_URL, password: PASSWORD)
- aadhaarXMLFileParser.run()
- aadhaarXMLFileParser.getOctusResult { (octusAadhaarResult, type) in
-     switch type {
-     case .success:
-     print("OctusResult: ", octusAadhaarResult)
-     case .failed(let fail):
-     print("Fail: ",fail)
-     case .error(let error):
-         print("Error",error)
-     }
- }
+class ViewController: UIViewController,AadhaarResultDelegate{
+    func didReceiveAadhaarResult(_ data: AadhaarResults) {
+       
+    let referenceId = octusAadhaarResult.referecnceId
+    let uid = octusAadhaarResult.uid
+    let timeStamp = octusAadhaarResult.timeStamp
+    let name = octusAadhaarResult.name
+    let careOf = octusAadhaarResult.co
+    let dob = octusAadhaarResult.dob
+    let gender = octusAadhaarResult.gender
+    let house = octusAadhaarResult.house
+    let street = octusAadhaarResult.street
+    let lm = octusAadhaarResult.lm
+    let loc = octusAadhaarResult.loc
+    let vtc = octusAadhaarResult.vtc
+    let po = octusAadhaarResult.po
+    let subDist = octusAadhaarResult.subdist
+    let dist = octusAadhaarResult.dist
+    let state = octusAadhaarResult.state
+    let country = octusAadhaarResult.country
+    let pc = octusAadhaarResult.pc
+    let yob = octusAadhaarResult.yob
+    let facePhoto = octusAadhaarResult.photo
+        }
+    }
+    func didFailedAadhaarResult(_ error: String) {
+        let errorCode = error
+    }
 ```
 ####  In-App SDK 
 
@@ -86,47 +102,11 @@ let aadhaarXMLFileParser = OctusAadhaarOffline(licenceKey: LICENCE_KEY_OCTUS_AAD
  import UIKit
  import aadhaarOffline
  
- let aadhaarInAppParser = OctusInappAadhaarOffline()
-       aadhaarInAppParser.licenceKey = LICENCE_KEY_OCTUS_AADHAR_OFFLINE_SDK
-       aadhaarInAppParser.octusBaseUrl = OCTUS_AADHAR_OFFLINE_API_BASE_URL
-       aadhaarInAppParser.octuskeyId = OCTUS_AADHAR_OFFLINE_KEY_ID
-       aadhaarInAppParser.octuskeySecret = OCTUS_AADHAR_OFFLINE_KEY_SEC
-       aadhaarInAppParser.modalPresentationStyle = .fullScreen
-       aadhaarInAppParser.callback = {
-           (octusAadhaarResult) in
-           print("OctusResult: ",octusAadhaarResult)
-       }
-       self.present(aadhaarInAppParser, animated:true, completion:nil)
+  Aadhaar.performSegueToFrameworkVC(caller: self, licenceKey: "LICENCE_KEY_OCTUS_AADHAR_OFFLINE_SDK", baseUrl: "OCTUS_AADHAR_OFFLINE_API_BASE_URL", keyId: "OCTUS_AADHAR_OFFLINE_KEY_ID", keysecret: "OCTUS_AADHAR_OFFLINE_KEY_SEC")
+  Aadhaar.aadhaarDelegate = self
 
 ``` 
 
-
-## Octus AadhaarOffline Result
-
-```swift
-
- let referenceId = octusAadhaarResult.referecnceId
- let uid = octusAadhaarResult.uid
- let timeStamp = octusAadhaarResult.timeStamp
- let name = octusAadhaarResult.name
- let careOf = octusAadhaarResult.co
- let dob = octusAadhaarResult.dob
- let gender = octusAadhaarResult.gender
- let house = octusAadhaarResult.house
- let street = octusAadhaarResult.street
- let lm = octusAadhaarResult.lm
- let loc = octusAadhaarResult.loc
- let vtc = octusAadhaarResult.vtc
- let po = octusAadhaarResult.po
- let subDist = octusAadhaarResult.subdist
- let dist = octusAadhaarResult.dist
- let state = octusAadhaarResult.state
- let country = octusAadhaarResult.country
- let pc = octusAadhaarResult.pc
- let yob = octusAadhaarResult.yob
- let facePhoto = octusAadhaarResult.photo
- 
-```
 
 ## Octus Error Codes
 
@@ -139,31 +119,11 @@ Error codes and their meaning are tabulated below
 | 1103  | Invalid File URL            |
 | 1104  | Incorrect Zip  File Password    |
 | 1105  | Transaction Failed         |
+| 1106  | Internet Connection        |
+| 1107  | SDK Intrupt        |
 
 
 ## Octus Parameters
-
-   ***(File SDK)***
-   ```swift
-   let aadhaarXMLFileParser = OctusAadhaarOffline(licenceKey: licenceKey, filePath: selectedFileUrl!, password: "share_code")
- ```
-  - LICENCE_KEY_OCTUS_AADHAR_OFFLINE_SDK - Accept the octus aadhaar offline licence key as a String
-  - SELECTED_FILE_URL - Selecting downloaded ZIP file url by following method
-    
-    Download link - https://resident.uidai.gov.in/offline-kyc
-    
-       ```swift
-          let documentPicker = UIDocumentPickerViewController(documentTypes: ["public.zip-archive", "com.pkware.zip-archive"], in: .import)
-            documentPicker.delegate = self
-            documentPicker.modalPresentationStyle = .fullScreen
-            present(documentPicker, animated: true, completion: nil)
-            
-            func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
-                        self.SELECTED_FILE_URL = url as URL
-                }
-
-     ```
-     - PASSWORD - Zip password as a String (Entered at a time of download xml from UIDAI website)
    
 ***(In-App SDK)***
 
