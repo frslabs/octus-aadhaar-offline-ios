@@ -101,9 +101,11 @@ class ViewController: UIViewController,AadhaarResultDelegate{
     
     2. Invoke Aadhaar offline SDK
     
-   override func viewDidAppear(_ animated: Bool) {
-   Aadhaar.performSegueToFrameworkVC(caller: self, licenceKey: "LICENCE_KEY_OCTUS_AADHAR_OFFLINE_SDK", baseUrl: "OCTUS_AADHAR_OFFLINE_API_BASE_URL", keyId:          "OCTUS_AADHAR_OFFLINE_KEY_ID", keysecret: "OCTUS_AADHAR_OFFLINE_KEY_SEC")
-  Aadhaar.aadhaarDelegate = self
+   override func viewDidAppear(_ animated: Bool){
+   
+    Aadhaar.performSegueToFrameworkVC(caller: self, licenceKey:"LICENCE_KEY_OCTUS_AADHAR_OFFLINE_SDK",baseUrl:"OCTUS_AADHAR_OFFLINE_API_BASE_URL",
+    keyId:"OCTUS_AADHAR_OFFLINE_KEY_ID" ,keysecret: "OCTUS_AADHAR_OFFLINE_KEY_SEC")
+    Aadhaar.aadhaarDelegate = self
     }
     
     // ...    
