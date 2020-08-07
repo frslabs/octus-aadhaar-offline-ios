@@ -117,13 +117,13 @@ Error codes and their meaning are tabulated below
 
 | Code          | Message              |
 | ------------- | ------------------- |
-| 1101  |  Licence Expired           |
+| 1101  |  Licence Expir          |
 | 1102  |  Licence Invalid            |
 | 1103  | Invalid File URL            |
 | 1104  | Incorrect Zip  File Password    |
-| 1105  | Transaction Failed         |
+| 1105  | Transaction Fail         |
 | 1106  | Internet Connection        |
-| 1107  | SDK Intrupt        |
+| 1107  | SDK Interupt        |
 
 
 ## Octus Parameters
