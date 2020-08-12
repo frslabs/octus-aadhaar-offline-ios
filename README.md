@@ -45,6 +45,7 @@ You can use [CocoaPods](http://cocoapods.org/) to install `aadhaarOffline` by ad
 ```ruby
 platform :ios, '13.0'
 source 'https://gitlab.com/frslabs-public/ios/aadhaaroffline.git'
+source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 pod 'aadhaarOffline','1.2.0'
 pod 'Zip'
