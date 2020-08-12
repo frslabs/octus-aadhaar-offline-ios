@@ -71,7 +71,7 @@ import aadhaarOffline
 
 class ViewController: UIViewController,AadhaarResultDelegate{
     func didReceiveAadhaarResult(_ data: AadhaarResults) {
-       
+    let octusAadhaarResult = data.aadhaarData!
     let referenceId = octusAadhaarResult.referecnceId
     let uid = octusAadhaarResult.uid
     let timeStamp = octusAadhaarResult.timeStamp
