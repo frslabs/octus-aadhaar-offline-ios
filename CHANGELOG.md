@@ -2,7 +2,7 @@
 ## **v1.2.0** - *10-08-2020*
 ### Added
 - Updated user interface.
-- Improvement on SDK functionality.
+- Performance enhancement.
 
 ## **v1.0.0** - *29-01-2020*
 ### Added
