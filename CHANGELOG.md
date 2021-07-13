@@ -1,4 +1,8 @@
 
+## **v1.3.1** - *13-07-2021*
+### Added
+- Updated swift version.
+
 ## **v1.3.0** - *03-02-2021*
 ### Added
 - Bug fixes.
