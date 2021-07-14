@@ -32,8 +32,9 @@ Depending on the license - offline or online - you have opted for, the ping func
 
 ## Minimum Requirements
 
-- xcode 12.5
+- Xcode 12.5
 - iOS 12.0+
+- Swift 5.0
 
 ## Installation
 
