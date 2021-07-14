@@ -30,12 +30,10 @@ You will need a valid license to use the Octus Aadhaar Offline SDK, which can be
 
 Depending on the license - offline or online - you have opted for, the ping functionality to billing servers will be disabled or enabled. For instance, if you have opted for the offline SDK model, then there will be no server ping needed to our billing server to bill you. However, if you have chosen a transaction based pricing, then after each transaction, a ping request will be made to our billing server. This cannot be overrided by the App. A point to note is that if the ping transaction fails for any reason, the whole transaction will be void without any results from the SDK.
 
+## Minimum Requirements
 
-## iOS SDK Requirements
-
-- iOS 11.0+
-- Xcode 11.2
-
+- xcode 12.5
+- iOS 12.0+
 
 ## Installation
 
