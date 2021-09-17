@@ -1,3 +1,8 @@
+## **v1.3.3** - *17-09-2021*
+### Added
+- Updated server Apis.
+- Improved user interface.
+- Bug fixes.
 
 ## **v1.3.1** - *13-07-2021*
 ### Added
