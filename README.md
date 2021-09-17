@@ -1,5 +1,5 @@
 # Octus Aadhaar Offline SDK - iOS
-![version](https://img.shields.io/badge/version-v1.3.2-blue)
+![version](https://img.shields.io/badge/version-v1.3.3-blue)
 
 Aadhaar Paperless Offline eKYC is a secure and shareable document which can be used by any Aadhaar holder for offline verification of identification. The Aadhaar Offline document can be obtained from the UIDAI website. This SDK provides a simple plugin to your mobile App which allows the user to seamlessly share their offline Aadhaar file with the service provider. 
 
@@ -46,7 +46,7 @@ platform :ios, '13.0'
 source 'https://gitlab.com/frslabs-public/ios/aadhaaroffline.git'
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
-pod 'aadhaarOffline','1.3.2'
+pod 'aadhaarOffline','1.3.3'
 ```
 
 To get the full benefits import `aadhaarOffline` wherever you import UIKit
