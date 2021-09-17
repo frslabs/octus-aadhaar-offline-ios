@@ -95,8 +95,8 @@ class ViewController: UIViewController,AadhaarResultDelegate{
     2. Invoke Aadhaar offline SDK
    
     override func viewDidAppear(_ animated: Bool){
-    
-     Aadhaar.performSegueToFrameworkVC(caller: self, licenceKey: "LICENCE_KEY_OCTUS_AADHAR_OFFLINE_SDK", buttonColourCode: "ENTER HEX BUTTON COLOUR CODE" ?? "" ,                                       buttonTextColourCode: "ENTER HEX TEXT COLOUR CODE" ?? "")
+    Aadhaar.performSegueToFrameworkVC(caller: self, licenceKey: "LICENCE_KEY_OCTUS_AADHAR_OFFLINE_SDK", 
+    buttonColourCode: "ENTER HEX BUTTON COLOUR CODE" ?? "" ,buttonTextColourCode: "ENTER HEX TEXT COLOUR CODE" ?? "")
         Aadhaar.aadhaarDelegate = self  
     }
    
