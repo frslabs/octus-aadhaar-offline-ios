@@ -14,6 +14,8 @@ In both cases, the Aadhaar Offline file will be validated for its digital signat
 
 You can find the release history at [Changelog](CHANGELOG.md)
 
+‼ ATTENTION ‼ → BREAKING CHANGE introduced at Forus SDK `v1.3.4`. We have introduced a new license format. If you are using versions prior to `v1.3.4` and intend to update to `v1.3.4` or above please contact `support@frslabs.com` for an updated license.
+
 # Table Of Content
 - [Prerequisite](#prerequisite)
 - [iOS SDK Requirements](#requirements)
