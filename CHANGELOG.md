@@ -1,3 +1,8 @@
+## **v1.3.4** - *23-12-2022*
+### Added
+- Swift & Xcode 14.2 version update.
+- Support from iOS 13.0
+
 ## **v1.3.3** - *17-09-2021*
 ### Added
 - Updated server Apis.
